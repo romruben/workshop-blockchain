@@ -2,7 +2,12 @@
 Exercises workshop Blockchain
 
 ## Ethereum:
-  - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
-  - As described in README.md, edit `files/genesis.json`, by modifing `nonce` and `config.chainId` 
+  ### Create a ledger
+  *Note: deploy infraestructure with Terraform on AWS. Use anwbis and AWS_PROFILE*
   - Install terraform
-    - with Docker: `sudo docker run -i -t hashicorp/terraform:light plan main.tf`
+  - Configure aws-cli
+  - Configure anwbis
+  - export AWS_PROFILE
+  - Generate ssh key and import to AWS account, as described [here](https://gist.github.com/beeva-mariorodriguez/e1bedb4aa28e1ce97d16646950f1e9a6)
+  - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
+  - Follow instructions 1 to 4
