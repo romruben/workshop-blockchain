@@ -16,11 +16,13 @@ Exercises workshop Blockchain
   *Note: mist browser will be installed. Node.js 4.5 or higher is required*
   
   ```
+  #
   curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+  #
   apt-get install nodejs
   ```
-  
-  - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
+  
+  - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
   - Follow step 1
   - Follow step 5
   
