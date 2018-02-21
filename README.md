@@ -29,9 +29,9 @@ sudo apt-get install nodejs
   ### Exercise 1: Transactions and gas
   - Create a new account from Mist
   - Transfer Ether from your miner account to your new empty account
-  Answer: What fee is required for the transaction to be validated?
   
-  - 
+  *Answer the question: What fee is required for the transaction to be validated?*
+  
   ### Exercise 2: Upload a contract
   - Copy into Solidity Contract Source Code
 ```
