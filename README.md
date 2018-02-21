@@ -14,12 +14,10 @@ Exercises workshop Blockchain
   - Save BOOTNODE_ADDRESS in a text file
 
   ### Configure a local miner
-  *Note: geth and mist browser will be installed. Go interpreter and Node.js 4.5 or higher are required*
-```
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install nodejs
-``` 
-  - [install geth](https://github.com/ethereum/go-ethereum/wiki/Installing-Geth#install-on-ubuntu-via-ppas)
+  *Note: Ethereum data are located in `~/Library/Ethereum` on **MacOS**, and in `~/.ethereum` in **Linux***
+  - Download and install [Go/Golang](https://golang.org/dl/)
+  - Download [Geth & Tools](https://ethereum.github.io/go-ethereum/downloads/)
+  - Download and install [Ethereum Wallet and Mist](https://github.com/ethereum/mist/releases)
   - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
   - Copy (ask for) the `genesis.json` of the previously created private Ethereum ledger.
   - Follow step 1
