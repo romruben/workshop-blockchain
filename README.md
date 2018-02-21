@@ -26,8 +26,14 @@ sudo apt-get install nodejs
   - Copy (ask for) the BOOTNODE_ADDRESS of the previously created private Ethereum ledger.
   - Follow step 5
   
-  ### Upload a contract
-  - Copy into Solidity Contract Source Code 
+  ### Exercise 1: Transactions and gas
+  - Create a new account from Mist
+  - Transfer Ether from your miner account to your new empty account
+  Answer: What fee is required for the transaction to be validated?
+  
+  - 
+  ### Exercise 2: Upload a contract
+  - Copy into Solidity Contract Source Code
 ```
 pragma solidity ^0.4.18;
 /* Based on https://ethereum.org/token */
