@@ -20,7 +20,6 @@ Exercises workshop Blockchain
   - Download and install [Ethereum Wallet and Mist](https://github.com/ethereum/mist/releases)
   - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
   - Copy (ask for) the `genesis.json` of the previously created private Ethereum ledger.
-  - Follow step 1
   - Copy (ask for) the BOOTNODE_ADDRESS of the previously created private Ethereum ledger.
   - Follow step 5
   
