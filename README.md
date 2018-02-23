@@ -2,6 +2,10 @@
 Exercises workshop Blockchain
 
 ## Ethereum:
+
+  ### Exercise 0: Ethereum Virtual Machine
+  See https://github.com/ballesterosbr/evm_meetup
+
   ### Create a ledger
   *Note: deploy infraestructure with Terraform on AWS. Use anwbis and AWS_PROFILE*
   - Install terraform
