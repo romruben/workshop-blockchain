@@ -4,7 +4,22 @@ Exercises workshop Blockchain
 ## Ethereum:
 
   ### Exercise 0: Ethereum Virtual Machine
-  See https://github.com/ballesterosbr/evm_meetup
+  - Install golang-go and glide (Ubuntu)
+```
+  sudo apt install golang-go
+  sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update
+  sudo apt install glide
+```
+  - Configure $GOPATH and install evm
+```
+  echo "export GOPATH=~/go" >> ~/.bashrc
+  source ~/.bashrc
+  go get github.com/ebuchman/evm-tools/...
+  cd $GOPATH/src/github.com/ebuchman/evm-tools/
+  glide install
+```
+  - See https://github.com/ballesterosbr/evm_meetup#demo
+  
 
   ### Create a ledger
   *Note: deploy infraestructure with Terraform on AWS. Use anwbis and AWS_PROFILE*
