@@ -19,6 +19,9 @@ Exercises workshop Blockchain
   glide install
 ```
   - See https://github.com/ballesterosbr/evm_meetup#demo
+  - Follow demos 1 to 3
+  
+  *Answer the question: how to return the result as a 32-byte word? Hint: https://github.com/CoinCulture/evm-tools/blob/master/analysis/guide.md#execution*
   
 
   ### Create a ledger
