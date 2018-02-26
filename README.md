@@ -4,19 +4,12 @@ Exercises workshop Blockchain
 ## Ethereum:
 
   ### Exercise 0: Ethereum Virtual Machine
-  - Install golang-go and glide (Ubuntu)
+  - Install ethereum (Ubuntu)
 ```
-  sudo apt install golang-go
-  sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update
-  sudo apt install glide
-```
-  - Configure $GOPATH and install evm
-```
-  echo "export GOPATH=~/go" >> ~/.bashrc
-  source ~/.bashrc
-  go get github.com/ebuchman/evm-tools/...
-  cd $GOPATH/src/github.com/ebuchman/evm-tools/
-  glide install
+sudo apt-get install software-properties-common
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
 ```
   - See https://github.com/ballesterosbr/evm_meetup#demo
   - Follow demos 1 to 3
