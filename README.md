@@ -52,6 +52,7 @@ Exercises workshop Blockchain
   *Answer the question: What fee is required for the transaction to be validated?*
   
   ### Exercise 2: Upload a contract
+  - See https://www.ethereum.org/greeter
   - Copy into Solidity Contract Source Code
 ```
 pragma solidity ^0.4.18;
@@ -79,3 +80,4 @@ contract MyToken {
 
 ```
 - Deploy contract
+- Watch contract
