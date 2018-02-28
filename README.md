@@ -17,18 +17,7 @@ sudo apt-get install ethereum
   *Answer the question: how to return the result as a 32-byte word? Hint: https://github.com/CoinCulture/evm-tools/blob/master/analysis/guide.md#execution*
   
 
-  ### Create a ledger
-  *Note: deploy infraestructure with Terraform on AWS. Use anwbis and AWS_PROFILE*
-  - Install terraform
-  - Configure aws-cli
-  - Configure anwbis
-  - export AWS_PROFILE
-  - Generate ssh key and import to AWS account, as described [here](https://gist.github.com/beeva-mariorodriguez/e1bedb4aa28e1ce97d16646950f1e9a6)
-  - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
-  - Follow steps 1 to 4
-  - Save BOOTNODE_ADDRESS in a text file
-
-  ### Configure a local miner
+  ### Exercise 1a: Configure a local miner
   *Note: Ethereum data are located in `~/Library/Ethereum` on **MacOS**, and in `~/.ethereum` in **Linux***
   - Download and install [Go/Golang](https://golang.org/dl/)
   - Download [Geth & Tools](https://ethereum.github.io/go-ethereum/downloads/)
@@ -38,13 +27,13 @@ sudo apt-get install ethereum
   - Copy (ask for) the BOOTNODE_ADDRESS of the previously created private Ethereum ledger.
   - Follow step 5
   
-  ### Exercise 1: Transactions and gas
+  ### Exercise 1b: Transactions and gas
   - Create a new account from Mist
   - Transfer Ether from your miner account to your new empty account
   
   *Answer the question: What fee is required for the transaction to be validated?*
   
-  ### Exercise 2: Upload a contract
+  ### Exercise 1c: Upload a contract
   - Copy into Solidity Contract Source Code:
 ```
 pragma solidity ^0.4.18;
