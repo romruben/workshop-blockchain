@@ -18,7 +18,6 @@ sudo apt-get install ethereum
   
 
   ### Exercise 1a: Configure a local miner
-  *Note: Ethereum data are located in `~/Library/Ethereum` on **MacOS**, and in `~/.ethereum` in **Linux*** 
   - Download and install [Ethereum Wallet and Mist](https://github.com/ethereum/mist/releases)
   - Download [genesis.json](https://raw.githubusercontent.com/beeva-mariorodriguez/lab-workshop-blockchain-2017/master/files/genesis.json)
   
@@ -42,9 +41,9 @@ sudo apt-get install ethereum
              -etherbase=0x$(jq -r .address < ~/.ethereum/keystore/UTC*) \
              -rpc
   ```
-  *Note*: 
-  - *on Windows, replace variables with their values and remove backslashes ('\\').*
-  - *on Mac, replace ~/.ethereum/keystore by ~/Library/Ethereum/keystore*
+  - *Note*: 
+    - *on Windows, replace variables with their values and remove backslashes ('\\').*
+    - *on Mac, Ethereum data are located in `~/Library/Ethereum`. So replace ~/.ethereum/keystore by ~/Library/Ethereum/keystore*
   
   - attach to console: `geth attach`
   
