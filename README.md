@@ -4,13 +4,15 @@ Exercises workshop Blockchain
 ## Ethereum:
 
   ### Exercise 0: Ethereum Virtual Machine
-  - Install ethereum (Ubuntu)
+  - Option 1 (Linux, Windows and Mac): Download and install [Geth & Tools 1.8.1](https://ethereum.github.io/go-ethereum/downloads/)
+  - Option 2 (Ubuntu only)
 ```
 sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
 ```
+  - Test installation executing `evm`
   - See https://github.com/ballesterosbr/evm_meetup#demo
   - Follow demos 1 to 3
   
@@ -18,9 +20,7 @@ sudo apt-get install ethereum
   
 
   ### Exercise 1a: Configure a local miner
-  *Note: Ethereum data are located in `~/Library/Ethereum` on **MacOS**, and in `~/.ethereum` in **Linux***
-  - Download and install [Go/Golang](https://golang.org/dl/)
-  - Download [Geth & Tools](https://ethereum.github.io/go-ethereum/downloads/)
+  *Note: Ethereum data are located in `~/Library/Ethereum` on **MacOS**, and in `~/.ethereum` in **Linux*** 
   - Download and install [Ethereum Wallet and Mist](https://github.com/ethereum/mist/releases)
   - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
   - Copy (ask for) the `genesis.json` of the previously created private Ethereum ledger.
