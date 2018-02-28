@@ -24,8 +24,30 @@ sudo apt-get install ethereum
   - Download and install [Ethereum Wallet and Mist](https://github.com/ethereum/mist/releases)
   - git clone https://github.com/beeva-mariorodriguez/lab-workshop-blockchain-2017
   - Copy (ask for) the `genesis.json` of the previously created private Ethereum ledger.
+  
+  - initialize blockchain using genesis.json:
+  
+  ```bash
+  geth init files/genesis.json
+  ```
+  - create ethereum account to store mining profits:
+  
+  ```bash
+  geth account new
+  ```
   - Copy (ask for) the BOOTNODE_ADDRESS of the previously created private Ethereum ledger.
-  - Follow step 5
+  
+  - run miner:
+  
+  ```bash
+  geth -networkid $(jq .config.chainId < files/genesis.json) \
+             -bootnodes $BOOTNODE_ADDRESS \
+             -mine -minerthreads=1 \
+             -etherbase=0x$(jq -r .address < ~/.ethereum/keystore/UTC*) \
+             -rpc
+  ```
+  
+  - attach to console: `geth attach`
   
   ### Exercise 1b: Transactions and gas
   - Create a new account from Mist
