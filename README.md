@@ -4,27 +4,44 @@ Exercises workshop Blockchain
 ## Ethereum:
 
   ### Exercise 0: Ethereum Virtual Machine
-  - Option 1 (Linux, Windows and Mac): Download and install [Geth & Tools 1.8.1](https://ethereum.github.io/go-ethereum/downloads/)
-   
-     *Note: export path if required, e.g: `export PATH=$PATH:~/tools/geth-alltools-linux-amd64-1.8.1-1e67410e/`*
-  
-  - Option 2 (Ubuntu only)
+  - Install Ethereum Virtual Machine:
+    
+###### Mac
+
+Install via Homebrew.
+```
+brew update
+brew upgrade
+brew tap ethereum/ethereum
+brew install ethereum
+```
+###### Linux
+
+Install via `apt-get`.
 ```
 sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
 ```
+###### Windows
+Download lastest binary [here](https://geth.ethereum.org/downloads/), extract it and open a command terminal and type:
+```
+chdir <path to extracted binary>
+open geth.exe
+```
+
   - Test installation executing `evm` 
   - See https://github.com/ballesterosbr/evm_meetup#demo
   - Follow demos 1 to 3
   
 
   ### Exercise 1a: Configure a local miner
+  - Download [Geth](https://geth.ethereum.org/downloads/) _(only Linux and Mac)_
   - Download and install [Ethereum Wallet](https://github.com/ethereum/mist/releases)
   - Download [genesis.json](https://raw.githubusercontent.com/beeva-mariorodriguez/lab-workshop-blockchain-2017/master/files/genesis.json)
   
-  - initialize blockchain using genesis.json:
+  - Initialize blockchain using genesis.json:
   
   ```bash
   mkdir chaindata
@@ -39,7 +56,10 @@ sudo apt-get install ethereum
   ```
   - Copy (ask for) the BOOTNODE_ADDRESS of the previously created private Ethereum ledger.
   
-  - run miner:
+  - Run miner: Ask us for *BOOTNODE_ADDRESS*.
+  
+  ##### Linux and Mac
+  On Mac, Ethereum data are located in `~/Library/Ethereum`. So replace `~/.ethereum/keystore` by `~/Library/Ethereum/keystore`
   ```bash
   geth -networkid $(jq .config.chainId < genesis.json) \
              -bootnodes $BOOTNODE_ADDRESS \
@@ -47,11 +67,14 @@ sudo apt-get install ethereum
              -etherbase=0x$(jq -r .address < chaindata/keystore/UTC*) \
              -rpc -datadir=chaindata
   ```
-  - *Note*: 
-    - *on Windows, replace variables with their values and remove backslashes ('\\').*
-    - *on Mac, Ethereum data are located in `~/Library/Ethereum`. So replace ~/.ethereum/keystore by ~/Library/Ethereum/keystore*
+
+  ##### Windows
+  Check *`chainId`* value on `genesis.json` (`config > chainId`) and get your *`walletId`* from `<ethereum_data_path>/keystore`, into file prefixed with `UTC--*`, in its `address` attribute (starts with `0x`). Then, execute:
+  ```
+geth.exe -networkid <chainId> -bootnodes <bootnode_address> -mine -minerthreads=1 -etherbase=<walletIid> -rpc -datadir=chaindata
+  ```
   
-  - launch ethereumwallet:
+  - Launch ethereumwallet:
   ```
   ethereumwallet --datadir=chaindata --rpc chaindata/geth.ipc
   ```
