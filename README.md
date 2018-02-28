@@ -8,7 +8,7 @@ Exercises workshop Blockchain
     
 ###### Mac
 
-Install via Homebrew.
+Install via [Homebrew](https://brew.sh/).
 ```
 brew update
 brew upgrade
