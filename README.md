@@ -5,6 +5,9 @@ Exercises workshop Blockchain
 
   ### Exercise 0: Ethereum Virtual Machine
   - Option 1 (Linux, Windows and Mac): Download and install [Geth & Tools 1.8.1](https://ethereum.github.io/go-ethereum/downloads/)
+   
+     *Note: export path if required, e.g: `export PATH=$PATH:~/tools/geth-alltools-linux-amd64-1.8.1-1e67410e/`*
+  
   - Option 2 (Ubuntu only)
 ```
 sudo apt-get install software-properties-common
@@ -12,7 +15,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
 ```
-  - Test installation executing `evm`
+  - Test installation executing `evm` 
   - See https://github.com/ballesterosbr/evm_meetup#demo
   - Follow demos 1 to 3
   
@@ -24,8 +27,11 @@ sudo apt-get install ethereum
   - initialize blockchain using genesis.json:
   
   ```bash
-  geth init genesis.json
+  mkdir chaindata
+  geth init genesis.json --datadir chaindata
+  # --datadir chaindata to avoid error: database already contains an incompatible genesis block
   ```
+  
   - create ethereum account to store mining profits:
   
   ```bash
@@ -39,7 +45,7 @@ sudo apt-get install ethereum
              -bootnodes $BOOTNODE_ADDRESS \
              -mine -minerthreads=1 \
              -etherbase=0x$(jq -r .address < ~/.ethereum/keystore/UTC*) \
-             -rpc
+             -rpc -datadir=chaindata
   ```
   - *Note*: 
     - *on Windows, replace variables with their values and remove backslashes ('\\').*
