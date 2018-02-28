@@ -59,7 +59,7 @@ sudo apt-get install ethereum
   - (If required) attach to console: `geth attach --datadir=chaindata`
   
   ### Exercise 1b: Transactions and gas
-  - Create a new account from Mist
+  - Create a new account from Ethereum Wallet
   - Transfer Ether from your miner account to your new empty account
   
   ### Exercise 1c: Upload a contract
@@ -94,4 +94,8 @@ contract MyToken {
 
 ```
 - Deploy contract
-- Watch contract
+
+### Exercise 1d: Execute a contract
+- Select contract *My Token* and execute function *Transfer*
+- See transaction details of contract execution
+
