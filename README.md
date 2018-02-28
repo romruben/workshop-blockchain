@@ -21,7 +21,7 @@ sudo apt-get install ethereum
   
 
   ### Exercise 1a: Configure a local miner
-  - Download and install [Ethereum Wallet and Mist](https://github.com/ethereum/mist/releases)
+  - Download and install [Ethereum Wallet](https://github.com/ethereum/mist/releases)
   - Download [genesis.json](https://raw.githubusercontent.com/beeva-mariorodriguez/lab-workshop-blockchain-2017/master/files/genesis.json)
   
   - initialize blockchain using genesis.json:
@@ -29,13 +29,13 @@ sudo apt-get install ethereum
   ```bash
   mkdir chaindata
   geth init genesis.json --datadir chaindata
-  # --datadir chaindata to avoid error: database already contains an incompatible genesis block
+  # --datadir chaindata to avoid conflicts. E.g. error: database already contains an incompatible genesis block
   ```
   
   - create ethereum account to store mining profits:
   
   ```bash
-  geth account new
+  geth account new --datadir chaindata
   ```
   - Copy (ask for) the BOOTNODE_ADDRESS of the previously created private Ethereum ledger.
   
@@ -44,14 +44,19 @@ sudo apt-get install ethereum
   geth -networkid $(jq .config.chainId < genesis.json) \
              -bootnodes $BOOTNODE_ADDRESS \
              -mine -minerthreads=1 \
-             -etherbase=0x$(jq -r .address < ~/.ethereum/keystore/UTC*) \
+             -etherbase=0x$(jq -r .address < chaindata/keystore/UTC*) \
              -rpc -datadir=chaindata
   ```
   - *Note*: 
     - *on Windows, replace variables with their values and remove backslashes ('\\').*
     - *on Mac, Ethereum data are located in `~/Library/Ethereum`. So replace ~/.ethereum/keystore by ~/Library/Ethereum/keystore*
   
-  - attach to console: `geth attach`
+  - launch ethereumwallet:
+  ```
+  ethereumwallet --datadir=chaindata --rpc chaindata/geth.ipc
+  ```
+  
+  - (If required) attach to console: `geth attach --datadir=chaindata`
   
   ### Exercise 1b: Transactions and gas
   - Create a new account from Mist
