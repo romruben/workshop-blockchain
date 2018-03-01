@@ -4,7 +4,7 @@ Exercises workshop Blockchain
 ## Ethereum:
 
   ### Exercise 0: Ethereum Virtual Machine
-  - Install Ethereum Virtual Machine:
+  - Install Ethereum Virtual Machine, included in Ethereum package:
     
 ###### Mac
 
@@ -37,7 +37,6 @@ open geth.exe
   
 
   ### Exercise 1a: Configure a local miner
-  - Download [Geth](https://geth.ethereum.org/downloads/) _(only Linux and Mac)_
   - Download and install [Ethereum Wallet](https://github.com/ethereum/mist/releases)
   - Download [genesis.json](https://raw.githubusercontent.com/beeva-mariorodriguez/lab-workshop-blockchain-2017/master/files/genesis.json)
   
@@ -69,9 +68,9 @@ open geth.exe
   ```
 
   ##### Windows
-  Check *`chainId`* value on `genesis.json` (`config > chainId`) and get your *`walletId`* from `<ethereum_data_path>/keystore`, into file prefixed with `UTC--*`, in its `address` attribute (starts with `0x`). Then, execute:
+  Check *`chainId`* value on `genesis.json` and get your *`address`* from `<ethereum_data_path>/keystore/`, in file prefixed with `UTC`. Then, execute:
   ```
-geth.exe -networkid <chainId> -bootnodes <bootnode_address> -mine -minerthreads=1 -etherbase=<walletIid> -rpc -datadir=chaindata
+geth.exe -networkid <chainId> -bootnodes <bootnode_address> -mine -minerthreads=1 -etherbase=0x<address> -rpc -datadir=chaindata
   ```
   
   - Launch ethereumwallet:
