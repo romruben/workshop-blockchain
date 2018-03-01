@@ -83,6 +83,7 @@ geth.exe -networkid <chainId> -bootnodes <bootnode_address> -mine -minerthreads=
   ### Exercise 1b: Transactions and gas
   - Create a new account from Ethereum Wallet
   - Transfer Ether from your miner account to your new empty account
+  - Wait until recommended number of confirmations is achieved
   
   ### Exercise 1c: Upload a contract
   - Copy into Solidity Contract Source Code:
@@ -115,9 +116,14 @@ contract MyToken {
 }
 
 ```
-- Deploy contract
+- Deploy contract MyToken from your Main Account with parameter initialSupply of 1000
+- Wait until recommended number of confirmations is achieved
+- See transaction details of contract creation
+- Check Custom Tokens in section "Contratos"
+- Check balance of your accounts
 
 ### Exercise 1d: Execute a contract
-- Select contract *My Token* and execute function *Transfer*
-- See transaction details of contract execution
+- Select contract *My Token* and execute function *Transfer* from your Main Account passing as parameter a number bigger than 1000. What happened?
+- Repeat with a number smaller than 1000.
+- Check balance of your accounts
 
