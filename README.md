@@ -3,7 +3,7 @@ Exercises workshop Blockchain
 
 ## Ethereum:
 
-  ### Exercise 0: Ethereum Virtual Machine
+  ### Exercise 1: Ethereum Virtual Machine
   - Install Ethereum Virtual Machine, included in Ethereum package:
     
 ###### Mac
@@ -36,7 +36,7 @@ open geth.exe
   - Follow demos 1 to 3
   
 
-  ### Exercise 1a: Configure a local miner
+  ### Exercise 2a: Configure a local miner
   - Download and install [Ethereum Wallet](https://github.com/ethereum/mist/releases)
   - Download [genesis.json](https://raw.githubusercontent.com/beeva-mariorodriguez/lab-workshop-blockchain-2017/master/files/genesis.json)
   
@@ -80,12 +80,12 @@ geth.exe -networkid <chainId> -bootnodes <bootnode_address> -mine -minerthreads=
   
   - (If required) attach to console: `geth attach --datadir=chaindata`
   
-  ### Exercise 1b: Transactions and gas
+  ### Exercise 2b: Transactions and gas
   - Create a new account from Ethereum Wallet
   - Transfer Ether from your miner account to your new empty account
   - Wait until recommended number of confirmations is achieved
   
-  ### Exercise 1c: Upload a contract
+  ### Exercise 2c: Upload a contract
   - Copy into Solidity Contract Source Code:
 ```
 pragma solidity ^0.4.18;
@@ -122,7 +122,7 @@ contract MyToken {
 - Check Custom Tokens in section "Contratos"
 - Check balance of your accounts
 
-### Exercise 1d: Execute a contract
+### Exercise 2d: Execute a contract
 - Select contract *My Token* and execute function *Transfer* from your Main Account passing as parameter a number bigger than 1000. What happened?
 - Repeat with a number smaller than 1000.
 - Check balance of your accounts
