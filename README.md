@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install ethereum
 ```
 ###### Windows
-Download lastest binary [here](https://geth.ethereum.org/downloads/), extract it and open a command terminal and type:
+Download lastest binary [here](https://geth.ethereum.org/downloads/), extract it and install. Then open a command terminal and type:
 ```
 chdir <path to extracted binary>
 open geth.exe
